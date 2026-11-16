@@ -1,0 +1,156 @@
+:root {
+  --background-color: black;
+  --description-background-color: rgba(0, 0, 0, 0.6);
+  --text-color: #eee;
+  --footer-background-color: #222;
+  --button-color: #222;
+  --button-highlight-color: #333;
+  --shadow-color: black;
+  --text-content-width: 768px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+  font-family: Georgia, "Times New Roman", Times, serif;
+  line-height: 1.5;
+}
+
+#landing {
+  color: var(--text-color);
+  font-size: large;
+  min-height: 100dvh;
+  max-width: var(--text-content-width);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#landing * {
+  margin: 0;
+}
+
+#media-container {
+  position: sticky;
+  top: 0;
+  min-height: 100dvh;
+  z-index: 0;
+  box-shadow: 0 0 1rem var(--shadow-color);
+}
+
+.media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.media.visible {
+  opacity: 1;
+}
+
+.media.cover {
+  object-fit: cover;
+}
+
+#zoom-toggle {
+  position: sticky;
+  top: 1rem;
+  margin: 1rem;
+  z-index: 2;
+  font-size: large;
+  font-weight: large;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#zoom-toggle:hover {
+  cursor: pointer;
+  background-color: var(--button-highlight-color);
+}
+
+#descriptions {
+  display: flex;
+  flex-direction: column;
+  gap: 100dvh;
+  padding-bottom: 100dvh;
+}
+
+.description {
+  position: relative;
+  background-color: var(--description-background-color);
+  color: var(--text-color);
+  padding: 1.5rem;
+  border-radius: 16px;
+  margin: 0 auto;
+  max-width: var(--text-content-width);
+  scroll-margin-top: 95dvh;
+  z-index: 1;
+}
+
+.description p {
+  margin: 0;
+}
+
+/* Background */
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--text-color);
+  margin: 0 auto;
+}
+
+#footer-content {
+  max-width: var(--text-content-width);
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+#footer-content a {
+  color: var(--text-color);
+  font-size: large;
+}
+
+#thumbnails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  gap: 0.75rem;
+  padding: 0;
+  margin: 2rem 0;
+}
+
+.thumbnail {
+  display: block;
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  transition: transform 125ms ease;
+}
+
+.thumbnail:hover {
+  transform: scale(1.05);
+}
+
+@media (width < 600px) {
+  #landing {
+    font-size: medium;
+  }
+}
