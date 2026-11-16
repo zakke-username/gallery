@@ -2,11 +2,23 @@
   --background-color: black;
   --description-background-color: rgba(0, 0, 0, 0.6);
   --text-color: #eee;
-  --footer-background-color: #222;
+  --footer-background-color: #111;
   --button-color: #222;
   --button-highlight-color: #333;
   --shadow-color: black;
   --text-content-width: 768px;
+  color-scheme: dark;
+}
+
+:root.light {
+  --background-color: #eee;
+  --description-background-color: rgba(255, 255, 255, 0.7);
+  --text-color: #111;
+  --footer-background-color: white;
+  --button-color: #ddd;
+  --button-highlight-color: #ccc;
+  --shadow-color: rgba(0, 0, 0, 0.5);
+  color-scheme: light;
 }
 
 * {
@@ -43,12 +55,17 @@ body {
   margin: 0;
 }
 
+@media (width < 600px) {
+  #landing {
+    font-size: medium;
+  }
+}
+
 #media-container {
   position: sticky;
   top: 0;
   min-height: 100dvh;
   z-index: 0;
-  box-shadow: 0 0 1rem var(--shadow-color);
 }
 
 .media {
@@ -58,7 +75,7 @@ body {
   height: 100%;
   object-fit: contain;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 600ms ease;
 }
 
 .media.visible {
@@ -69,23 +86,9 @@ body {
   object-fit: cover;
 }
 
-#zoom-toggle {
-  position: sticky;
-  top: 1rem;
-  margin: 1rem;
-  z-index: 2;
-  font-size: large;
-  font-weight: large;
-  border: none;
-  color: var(--text-color);
-  background-color: var(--button-color);
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-}
-
-#zoom-toggle:hover {
-  cursor: pointer;
-  background-color: var(--button-highlight-color);
+:root.light img.media,
+:root.light video.media {
+  filter: drop-shadow(var(--shadow-color) 0 0 16px);
 }
 
 #descriptions {
@@ -103,7 +106,7 @@ body {
   border-radius: 16px;
   margin: 0 auto;
   max-width: var(--text-content-width);
-  scroll-margin-top: 95dvh;
+  scroll-margin-top: 99dvh;
   z-index: 1;
 }
 
@@ -111,20 +114,28 @@ body {
   margin: 0;
 }
 
-/* Background */
 footer {
   background-color: var(--footer-background-color);
+  box-shadow: inset 0 16px 16px -16px var(--shadow-color);
+}
+
+:root.light footer {
+  background-color: var(--background-color);
+  box-shadow: none;
+}
+
+.footer-content {
+  max-width: var(--text-content-width);
   color: var(--text-color);
   margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
-#footer-content {
-  max-width: var(--text-content-width);
-  margin: 0 auto;
-  padding: 2rem;
+.footer-content * {
+  margin: 0;
 }
 
-#footer-content a {
+.footer-content a {
   color: var(--text-color);
   font-size: large;
 }
@@ -142,15 +153,34 @@ footer {
   width: 100%;
   aspect-ratio: 1;
   object-fit: cover;
-  transition: transform 125ms ease;
+  transition: transform 100ms ease;
 }
 
 .thumbnail:hover {
   transform: scale(1.05);
 }
 
-@media (width < 600px) {
-  #landing {
-    font-size: medium;
-  }
+#buttons {
+  position: fixed;
+  top: 0;
+  right: 0;
+  margin: 1rem;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+}
+
+#buttons button {
+  font-size: large;
+  font-weight: large;
+  border: none;
+  color: var(--text-color);
+  background-color: var(--button-color);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+#buttons button:hover {
+  cursor: pointer;
+  background-color: var(--button-highlight-color);
 }

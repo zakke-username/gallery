@@ -54,6 +54,7 @@ function createThumbnails() {
 
     const image = document.createElement("img");
     if (item.type === "video") {
+      // Remove file extension
       const dotIndex = item.fileName.lastIndexOf(".");
       const baseName =
         dotIndex > 0 ? item.fileName.slice(0, dotIndex) : item.fileName;
@@ -71,10 +72,18 @@ function createThumbnails() {
 function displayMedia(index) {
   document.querySelectorAll(".media").forEach((element) => {
     const isVisible = element.dataset.index === index;
+    const wasVisible = element.classList.contains("visible");
     element.classList.toggle("visible", isVisible);
 
-    if (element.tagName === "VIDEO")
-      isVisible ? element.play().catch(() => {}) : element.pause();
+    // Restart and autoplay/pause videos
+    if (element.tagName === "VIDEO") {
+      if (isVisible) {
+        if (!wasVisible) element.currentTime = 0;
+        element.play().catch(() => {});
+      } else {
+        element.pause();
+      }
+    }
   });
 }
 
@@ -101,11 +110,20 @@ function setupZoomToggle() {
   });
 }
 
+function setupThemeToggle() {
+  const themeButton = document.getElementById("theme-toggle");
+  themeButton.addEventListener("click", () => {
+    const isLight = document.documentElement.classList.toggle("light");
+    themeButton.textContent = isLight ? "🔅" : "🔆";
+  });
+}
+
 addEventListener("DOMContentLoaded", () => {
   createMediaElements();
   createDescriptionCards();
   createThumbnails();
   observeDescriptions();
   setupZoomToggle();
+  setupThemeToggle();
   displayMedia("0");
 });
