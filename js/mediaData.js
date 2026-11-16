@@ -30,6 +30,12 @@ export const mediaData = [
       "Phasellus interdum, massa et ultricies mollis, nulla massa volutpat diam, sit amet venenatis erat magna sed dolor. Integer laoreet dolor id urna consequat, euismod facilisis nisi suscipit. Proin faucibus turpis eu libero scelerisque elementum. Cras ut arcu et turpis lacinia imperdiet in eget mi. Donec sagittis rutrum diam, nec facilisis eros cursus quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et eleifend sapien, nec aliquet justo. Integer a tortor et sem rutrum accumsan at et est. Nunc vestibulum tempus enim vel faucibus. Nulla et vestibulum erat. Donec ut magna imperdiet, sollicitudin leo et, elementum magna. Etiam justo enim, tempus sit amet ex vitae, laoreet pulvinar metus.",
   },
   {
+    fileName: "1080x1920.webp",
+    type: "image",
+    description:
+      "Phasellus interdum, massa et ultricies mollis, nulla massa volutpat diam, sit amet venenatis erat magna sed dolor. Integer laoreet dolor id urna consequat, euismod facilisis nisi suscipit. Proin faucibus turpis eu libero scelerisque elementum. Cras ut arcu et turpis lacinia imperdiet in eget mi. Donec sagittis rutrum diam, nec facilisis eros cursus quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et eleifend sapien, nec aliquet justo. Integer a tortor et sem rutrum accumsan at et est. Nunc vestibulum tempus enim vel faucibus. Nulla et vestibulum erat. Donec ut magna imperdiet, sollicitudin leo et, elementum magna. Etiam justo enim, tempus sit amet ex vitae, laoreet pulvinar metus.",
+  },
+  {
     fileName: "1920x1080.webp",
     type: "image",
     description:

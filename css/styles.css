@@ -40,7 +40,7 @@ body {
 #landing {
   color: var(--text-color);
   font-size: large;
-  min-height: 100dvh;
+  min-height: 100svh;
   max-width: var(--text-content-width);
   display: flex;
   flex-direction: column;
@@ -64,7 +64,7 @@ body {
 #media-container {
   position: sticky;
   top: 0;
-  min-height: 100dvh;
+  min-height: 100svh;
   z-index: 0;
 }
 
@@ -94,8 +94,8 @@ body {
 #descriptions {
   display: flex;
   flex-direction: column;
-  gap: 100dvh;
-  padding-bottom: 100dvh;
+  gap: 100svh;
+  padding-bottom: 100svh;
 }
 
 .description {
@@ -106,7 +106,7 @@ body {
   border-radius: 16px;
   margin: 0 auto;
   max-width: var(--text-content-width);
-  scroll-margin-top: 99dvh;
+  scroll-margin-top: 99svh;
   z-index: 1;
 }
 
