@@ -58,7 +58,7 @@ body {
   margin: 0;
 }
 
-@media (width < 600px) {
+@media (width < 768px) {
   #landing {
     font-size: medium;
   }
@@ -85,7 +85,7 @@ body {
   opacity: 1;
 }
 
-.media.cover {
+.zoomed .media {
   object-fit: cover;
 }
 

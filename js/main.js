@@ -1,77 +1,78 @@
 import { mediaData } from "./mediaData.js";
 
-function createMediaElements() {
-  const mediaContainer = document.getElementById("media-container");
+const media = document.getElementById("media-container");
+const descriptions = document.getElementById("descriptions");
+const thumbnails = document.getElementById("thumbnails");
 
-  mediaData.forEach((item, i) => {
-    let element;
-    if (item.type === "image") {
-      element = document.createElement("img");
-      element.src = `assets/images/${item.fileName}`;
-      element.alt = item.alt ?? "";
-    } else if (item.type === "video") {
-      element = document.createElement("video");
-      element.src = `assets/videos/${item.fileName}`;
-      element.muted = true;
-      element.loop = true;
-      element.playsInline = true;
-      element.preload = "metadata";
-    } else {
-      throw new Error(`Unknown media type: ${item.type}`);
-    }
-    element.classList.add("media");
-    element.dataset.index = i;
-
-    mediaContainer.appendChild(element);
-  });
+function createMediaElement(itemData, index) {
+  let element;
+  if (itemData.type === "image") {
+    element = document.createElement("img");
+    element.src = `assets/images/${itemData.fileName}`;
+    element.alt = itemData.alt ?? "";
+  } else if (itemData.type === "video") {
+    element = document.createElement("video");
+    element.src = `assets/videos/${itemData.fileName}`;
+    element.muted = true;
+    element.loop = true;
+    element.playsInline = true;
+    element.preload = "metadata";
+  } else {
+    throw new Error(`Unknown media type: ${itemData.type}`);
+  }
+  element.classList.add("media");
+  element.dataset.index = index;
+  return element;
 }
 
-function createDescriptionCards() {
-  const container = document.getElementById("descriptions");
+function createDescriptionCard(itemData, index) {
+  const element = document.createElement("div");
+  element.id = `item-${index}`;
+  element.classList.add("description");
+  element.dataset.index = index;
 
-  mediaData.forEach((item, i) => {
-    const element = document.createElement("div");
-    element.id = `item-${i}`;
-    element.classList.add("description");
-    element.dataset.index = i;
-
-    if (item.title) {
-      const titleElement = document.createElement("h3");
-      titleElement.innerText = item.title;
-      element.appendChild(titleElement);
-    }
-    if (item.description) {
-      const textElement = document.createElement("p");
-      textElement.innerText = item.description;
-      element.appendChild(textElement);
-    }
-
-    container.appendChild(element);
-  });
+  if (itemData.title) {
+    const titleElement = document.createElement("h3");
+    titleElement.innerText = itemData.title;
+    element.appendChild(titleElement);
+  }
+  if (itemData.description) {
+    const textElement = document.createElement("p");
+    textElement.innerText = itemData.description;
+    element.appendChild(textElement);
+  }
+  return element;
 }
 
-function createThumbnails() {
-  const container = document.getElementById("thumbnails");
+function createThumbnail(itemData, index) {
+  const link = document.createElement("a");
+  link.href = `#item-${index}`;
 
-  mediaData.forEach((item, i) => {
-    const link = document.createElement("a");
-    link.href = `#item-${i}`;
+  const image = document.createElement("img");
+  if (itemData.type === "video") {
+    // Remove file extension
+    const dotIndex = itemData.fileName.lastIndexOf(".");
+    const baseName =
+      dotIndex > 0 ? itemData.fileName.slice(0, dotIndex) : itemData.fileName;
+    image.src = `assets/thumbnails/${baseName}.webp`;
+  } else {
+    image.src = `assets/images/${itemData.fileName}`;
+  }
+  image.classList.add("thumbnail");
+  link.appendChild(image);
 
-    const image = document.createElement("img");
-    if (item.type === "video") {
-      // Remove file extension
-      const dotIndex = item.fileName.lastIndexOf(".");
-      const baseName =
-        dotIndex > 0 ? item.fileName.slice(0, dotIndex) : item.fileName;
-      image.src = `assets/thumbnails/${baseName}.webp`;
-    } else {
-      image.src = `assets/images/${item.fileName}`;
+  return link;
+}
+
+function observeDescriptions() {
+  const observer = new IntersectionObserver((entries) => {
+    for (const entry of entries) {
+      if (entry.isIntersecting) displayMedia(entry.target.dataset.index);
     }
-    image.classList.add("thumbnail");
-
-    link.appendChild(image);
-    container.appendChild(link);
   });
+  document
+    .querySelectorAll(".description")
+    .forEach((description) => observer.observe(description));
 }
 
 function displayMedia(index) {
@@ -92,25 +93,11 @@ function displayMedia(index) {
   });
 }
 
-function observeDescriptions() {
-  const observer = new IntersectionObserver((entries) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) displayMedia(entry.target.dataset.index);
-    }
-  });
-  document
-    .querySelectorAll(".description")
-    .forEach((description) => observer.observe(description));
-}
-
 function setupZoomToggle() {
   const zoomButton = document.getElementById("zoom-toggle");
-  let isZoomed = false;
+  const mediaContainer = document.getElementById("media-container");
   zoomButton.addEventListener("click", () => {
-    isZoomed = !isZoomed;
-    for (const item of document.querySelectorAll(".media")) {
-      item.classList.toggle("cover", isZoomed);
-    }
+    const isZoomed = mediaContainer.classList.toggle("zoomed");
     zoomButton.textContent = isZoomed ? "🔍−" : "🔍+";
   });
 }
@@ -123,10 +110,13 @@ function setupThemeToggle() {
   });
 }
 
-createMediaElements();
-createDescriptionCards();
-createThumbnails();
+mediaData.forEach((itemData, index) => {
+  media.appendChild(createMediaElement(itemData, index));
+  descriptions.appendChild(createDescriptionCard(itemData, index));
+  thumbnails.appendChild(createThumbnail(itemData, index));
+});
+
 observeDescriptions();
-setupZoomToggle();
 setupThemeToggle();
+setupZoomToggle();
 displayMedia("0");
