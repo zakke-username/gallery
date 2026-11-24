@@ -17,9 +17,7 @@ function createMediaElements() {
       element.playsInline = true;
       element.preload = "metadata";
     } else {
-      throw new Error(
-        item.type ? `Invalid media type: ${item.type}` : "Media type not set",
-      );
+      throw new Error(`Unknown media type: ${item.type}`);
     }
     element.classList.add("media");
     element.dataset.index = i;
@@ -37,9 +35,16 @@ function createDescriptionCards() {
     element.classList.add("description");
     element.dataset.index = i;
 
-    const textElement = document.createElement("p");
-    textElement.innerText = item.description;
-    element.appendChild(textElement);
+    if (item.title) {
+      const titleElement = document.createElement("h3");
+      titleElement.innerText = item.title;
+      element.appendChild(titleElement);
+    }
+    if (item.description) {
+      const textElement = document.createElement("p");
+      textElement.innerText = item.description;
+      element.appendChild(textElement);
+    }
 
     container.appendChild(element);
   });
@@ -118,12 +123,10 @@ function setupThemeToggle() {
   });
 }
 
-addEventListener("DOMContentLoaded", () => {
-  createMediaElements();
-  createDescriptionCards();
-  createThumbnails();
-  observeDescriptions();
-  setupZoomToggle();
-  setupThemeToggle();
-  displayMedia("0");
-});
+createMediaElements();
+createDescriptionCards();
+createThumbnails();
+observeDescriptions();
+setupZoomToggle();
+setupThemeToggle();
+displayMedia("0");

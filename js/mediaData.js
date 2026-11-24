@@ -2,79 +2,39 @@ export const mediaData = [
   {
     fileName: "768x1024.webp",
     type: "image",
+    title: "Placeholder title for first image",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor leo luctus sagittis pharetra. Sed eget maximus orci, tristique elementum est. Donec sed varius leo. Ut tempor fringilla auctor. Vestibulum in sapien a orci lobortis sagittis ac eget lectus. Pellentesque nisi tortor, tempus vel euismod vitae, porttitor eleifend odio. Fusce semper placerat ipsum, ac auctor arcu iaculis et. Nam ante purus, ultrices vel porttitor eu, laoreet quis mi. Phasellus risus arcu, semper vel sapien eu, placerat convallis ligula. Proin lobortis elementum viverra. In euismod, magna non pharetra euismod, ante lorem varius elit, nec mattis magna libero vitae dui. Maecenas non volutpat lectus. Fusce lacus mauris, hendrerit vel hendrerit eu, dignissim eget mauris. Duis et mi ex.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tempus tortor netus gravida lobortis dignissim ligula tempor lacinia. At vulputate commodo netus odio sollicitudin hendrerit sagittis arcu. Fermentum commodo ligula sociosqu vulputate malesuada eget pretium potenti. Tincidunt laoreet taciti inceptos velit semper quis aenean malesuada. Adipiscing imperdiet rutrum aenean aptent habitasse posuere habitant condimentum.",
   },
   {
     fileName: "720p.mp4",
     type: "video",
     description:
-      "Sed lobortis dolor eu semper congue. Duis mattis sit amet elit sit amet consectetur. Morbi posuere, nunc eu accumsan feugiat, felis purus pellentesque mauris, non rutrum tellus dolor a sem. Aliquam cursus leo eu ornare sollicitudin. Nunc gravida mauris ut enim pharetra commodo. Nunc rutrum augue odio. Integer sodales molestie dui, in rhoncus nulla scelerisque id. Ut dolor risus, molestie eget urna a, tempus tempus ex. Mauris metus magna, fringilla id feugiat eu, ultrices non ligula. Donec quis nisl id lacus aliquet aliquet nec quis nisi.",
+      "Etiam vivamus erat vivamus aptent nulla elementum condimentum magna. At egestas cubilia taciti scelerisque semper rutrum hac senectus. Sociosqu cubilia proin at est sagittis tortor facilisi eros. Interdum nisi nisi sociis risus suspendisse lorem metus primis. Posuere est at cras non taciti cras mus himenaeos. Maecenas maecenas eget aliquam justo torquent molestie quis dolor.",
   },
   {
     fileName: "1024x768.webp",
     type: "image",
+    title: "Placeholder title for third image",
     description:
-      "Sed lobortis dolor eu semper congue. Duis mattis sit amet elit sit amet consectetur. Morbi posuere, nunc eu accumsan feugiat, felis purus pellentesque mauris, non rutrum tellus dolor a sem. Aliquam cursus leo eu ornare sollicitudin. Nunc gravida mauris ut enim pharetra commodo. Nunc rutrum augue odio. Integer sodales molestie dui, in rhoncus nulla scelerisque id. Ut dolor risus, molestie eget urna a, tempus tempus ex. Mauris metus magna, fringilla id feugiat eu, ultrices non ligula. Donec quis nisl id lacus aliquet aliquet nec quis nisi.",
+      "Varius condimentum sapien purus lorem nostra mauris penatibus accumsan. Sem laoreet porttitor praesent pulvinar turpis blandit vel suspendisse. Tortor venenatis ad consectetur pretium hendrerit lectus suspendisse sem. Blandit eros ullamcorper mi porta pharetra id condimentum mollis. Cum dui molestie porttitor odio dui per purus congue. Sapien sociosqu commodo purus integer dapibus cubilia at torquent.",
   },
   {
     fileName: "1080p.mp4",
     type: "video",
     description:
-      "Sed lobortis dolor eu semper congue. Duis mattis sit amet elit sit amet consectetur. Morbi posuere, nunc eu accumsan feugiat, felis purus pellentesque mauris, non rutrum tellus dolor a sem. Aliquam cursus leo eu ornare sollicitudin. Nunc gravida mauris ut enim pharetra commodo. Nunc rutrum augue odio. Integer sodales molestie dui, in rhoncus nulla scelerisque id. Ut dolor risus, molestie eget urna a, tempus tempus ex. Mauris metus magna, fringilla id feugiat eu, ultrices non ligula. Donec quis nisl id lacus aliquet aliquet nec quis nisi.",
+      "Nisi pulvinar rhoncus in neque leo est rhoncus nisi. Ultricies sit bibendum pulvinar placerat habitant diam nisi convallis. Arcu velit risus id suscipit interdum bibendum sollicitudin consequat. Orci fermentum justo enim nunc dignissim vehicula eu ac. Nulla cubilia sociis montes mattis facilisi hac faucibus est. Est vivamus placerat condimentum sapien rhoncus tortor erat hendrerit.",
   },
   {
     fileName: "1080x1920.webp",
     type: "image",
-    description:
-      "Phasellus interdum, massa et ultricies mollis, nulla massa volutpat diam, sit amet venenatis erat magna sed dolor. Integer laoreet dolor id urna consequat, euismod facilisis nisi suscipit. Proin faucibus turpis eu libero scelerisque elementum. Cras ut arcu et turpis lacinia imperdiet in eget mi. Donec sagittis rutrum diam, nec facilisis eros cursus quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et eleifend sapien, nec aliquet justo. Integer a tortor et sem rutrum accumsan at et est. Nunc vestibulum tempus enim vel faucibus. Nulla et vestibulum erat. Donec ut magna imperdiet, sollicitudin leo et, elementum magna. Etiam justo enim, tempus sit amet ex vitae, laoreet pulvinar metus.",
-  },
-  {
-    fileName: "1080x1920.webp",
-    type: "image",
-    description:
-      "Phasellus interdum, massa et ultricies mollis, nulla massa volutpat diam, sit amet venenatis erat magna sed dolor. Integer laoreet dolor id urna consequat, euismod facilisis nisi suscipit. Proin faucibus turpis eu libero scelerisque elementum. Cras ut arcu et turpis lacinia imperdiet in eget mi. Donec sagittis rutrum diam, nec facilisis eros cursus quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et eleifend sapien, nec aliquet justo. Integer a tortor et sem rutrum accumsan at et est. Nunc vestibulum tempus enim vel faucibus. Nulla et vestibulum erat. Donec ut magna imperdiet, sollicitudin leo et, elementum magna. Etiam justo enim, tempus sit amet ex vitae, laoreet pulvinar metus.",
+    title: "This is a title for an image with no description. 2026.",
   },
   {
     fileName: "1920x1080.webp",
     type: "image",
+    title: "Placeholder title for last image",
     description:
-      "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Suspendisse tincidunt purus eu ante auctor placerat. Integer vel ligula magna. Nam a congue neque, ut hendrerit ante. Maecenas non felis id neque consequat scelerisque at in metus. Fusce sapien libero, elementum tincidunt egestas eget, sollicitudin sit amet velit. Nulla aliquam vehicula iaculis. Cras erat nisi, molestie ac cursus et, facilisis non lectus. Integer eget odio convallis, elementum dolor et, congue lorem. Aenean sapien mauris, interdum eget congue sit amet, aliquam ac felis. Mauris metus diam, luctus eget erat in, commodo ultrices erat. Sed aliquet egestas dictum.",
-  },
-  {
-    fileName: "768x1024.webp",
-    type: "image",
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus auctor leo luctus sagittis pharetra. Sed eget maximus orci, tristique elementum est. Donec sed varius leo. Ut tempor fringilla auctor. Vestibulum in sapien a orci lobortis sagittis ac eget lectus. Pellentesque nisi tortor, tempus vel euismod vitae, porttitor eleifend odio. Fusce semper placerat ipsum, ac auctor arcu iaculis et. Nam ante purus, ultrices vel porttitor eu, laoreet quis mi. Phasellus risus arcu, semper vel sapien eu, placerat convallis ligula. Proin lobortis elementum viverra. In euismod, magna non pharetra euismod, ante lorem varius elit, nec mattis magna libero vitae dui. Maecenas non volutpat lectus. Fusce lacus mauris, hendrerit vel hendrerit eu, dignissim eget mauris. Duis et mi ex.",
-  },
-  {
-    fileName: "720p.mp4",
-    type: "video",
-    description:
-      "Sed lobortis dolor eu semper congue. Duis mattis sit amet elit sit amet consectetur. Morbi posuere, nunc eu accumsan feugiat, felis purus pellentesque mauris, non rutrum tellus dolor a sem. Aliquam cursus leo eu ornare sollicitudin. Nunc gravida mauris ut enim pharetra commodo. Nunc rutrum augue odio. Integer sodales molestie dui, in rhoncus nulla scelerisque id. Ut dolor risus, molestie eget urna a, tempus tempus ex. Mauris metus magna, fringilla id feugiat eu, ultrices non ligula. Donec quis nisl id lacus aliquet aliquet nec quis nisi.",
-  },
-  {
-    fileName: "1024x768.webp",
-    type: "image",
-    description:
-      "Sed lobortis dolor eu semper congue. Duis mattis sit amet elit sit amet consectetur. Morbi posuere, nunc eu accumsan feugiat, felis purus pellentesque mauris, non rutrum tellus dolor a sem. Aliquam cursus leo eu ornare sollicitudin. Nunc gravida mauris ut enim pharetra commodo. Nunc rutrum augue odio. Integer sodales molestie dui, in rhoncus nulla scelerisque id. Ut dolor risus, molestie eget urna a, tempus tempus ex. Mauris metus magna, fringilla id feugiat eu, ultrices non ligula. Donec quis nisl id lacus aliquet aliquet nec quis nisi.",
-  },
-  {
-    fileName: "1080p.mp4",
-    type: "video",
-    description:
-      "Sed lobortis dolor eu semper congue. Duis mattis sit amet elit sit amet consectetur. Morbi posuere, nunc eu accumsan feugiat, felis purus pellentesque mauris, non rutrum tellus dolor a sem. Aliquam cursus leo eu ornare sollicitudin. Nunc gravida mauris ut enim pharetra commodo. Nunc rutrum augue odio. Integer sodales molestie dui, in rhoncus nulla scelerisque id. Ut dolor risus, molestie eget urna a, tempus tempus ex. Mauris metus magna, fringilla id feugiat eu, ultrices non ligula. Donec quis nisl id lacus aliquet aliquet nec quis nisi.",
-  },
-  {
-    fileName: "1080x1920.webp",
-    type: "image",
-    description:
-      "Phasellus interdum, massa et ultricies mollis, nulla massa volutpat diam, sit amet venenatis erat magna sed dolor. Integer laoreet dolor id urna consequat, euismod facilisis nisi suscipit. Proin faucibus turpis eu libero scelerisque elementum. Cras ut arcu et turpis lacinia imperdiet in eget mi. Donec sagittis rutrum diam, nec facilisis eros cursus quis. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec et eleifend sapien, nec aliquet justo. Integer a tortor et sem rutrum accumsan at et est. Nunc vestibulum tempus enim vel faucibus. Nulla et vestibulum erat. Donec ut magna imperdiet, sollicitudin leo et, elementum magna. Etiam justo enim, tempus sit amet ex vitae, laoreet pulvinar metus.",
-  },
-  {
-    fileName: "1920x1080.webp",
-    type: "image",
-    description:
-      "Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nulla facilisi. Suspendisse tincidunt purus eu ante auctor placerat. Integer vel ligula magna. Nam a congue neque, ut hendrerit ante. Maecenas non felis id neque consequat scelerisque at in metus. Fusce sapien libero, elementum tincidunt egestas eget, sollicitudin sit amet velit. Nulla aliquam vehicula iaculis. Cras erat nisi, molestie ac cursus et, facilisis non lectus. Integer eget odio convallis, elementum dolor et, congue lorem. Aenean sapien mauris, interdum eget congue sit amet, aliquam ac felis. Mauris metus diam, luctus eget erat in, commodo ultrices erat. Sed aliquet egestas dictum.",
+      "Sollicitudin aptent rutrum ad cum inceptos euismod pellentesque iaculis. Laoreet dapibus accumsan montes ultricies lacus quisque vivamus mi. Velit proin dui inceptos faucibus cras imperdiet ridiculus etiam. Lectus porta aenean adipiscing vitae hendrerit cras eget natoque. Aliquam pellentesque velit congue class nulla tellus vehicula est. Id sociosqu a mi dolor dictum senectus sociosqu maecenas.",
   },
 ];
