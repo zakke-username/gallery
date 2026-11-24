@@ -8,11 +8,11 @@ function createMediaElement(itemData, index) {
   let element;
   if (itemData.type === "image") {
     element = document.createElement("img");
-    element.src = `assets/images/${itemData.fileName}`;
+    element.src = `assets/images/${itemData.file}`;
     element.alt = itemData.alt ?? "";
   } else if (itemData.type === "video") {
     element = document.createElement("video");
-    element.src = `assets/videos/${itemData.fileName}`;
+    element.src = `assets/videos/${itemData.file}`;
     element.muted = true;
     element.loop = true;
     element.playsInline = true;
@@ -50,13 +50,9 @@ function createThumbnail(itemData, index) {
 
   const image = document.createElement("img");
   if (itemData.type === "video") {
-    // Remove file extension
-    const dotIndex = itemData.fileName.lastIndexOf(".");
-    const baseName =
-      dotIndex > 0 ? itemData.fileName.slice(0, dotIndex) : itemData.fileName;
-    image.src = `assets/thumbnails/${baseName}.webp`;
+    image.src = `assets/thumbnails/${itemData.thumbnail}`;
   } else {
-    image.src = `assets/images/${itemData.fileName}`;
+    image.src = `assets/images/${itemData.file}`;
   }
   image.classList.add("thumbnail");
   link.appendChild(image);
